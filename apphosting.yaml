@@ -1,0 +1,17 @@
+kind: "AppStack"
+apiVersion: "v1"
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: "AIzaSyBoZan4Lq7BfgO13H6540GbmMbGvwFPVaM"
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "watch-today-29032.firebaseapp.com"
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "watch-today-29032"
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "watch-today-29032.firebasestorage.app"
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "448447892625"
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:448447892625:web:a2ba6ce5a49ec42c488330"
+  - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    value: "G-LDHNTK83QG"

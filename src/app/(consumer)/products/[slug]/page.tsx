@@ -1,14 +1,15 @@
 'use client';
 
-import React from 'react';
+import React, { use } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/store/useCart';
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
+export default function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
   const { addItem } = useCart();
 
   const product = {
-    id: params.slug || 'evergreen-gmt',
+    id: slug || 'evergreen-gmt',
     name: 'The Evergreen GMT',
     price: 8450,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCmgalLAICL04uKopGbWqLsvrEmTqldnQew0ZXDJA4iCpUEoQpM2Q1PgnY5kyi7bfGOytxHFtnAjB2i4lWQGZrJL8ctqCHV5p7RQrLym2LBKfxDf42lBHnXQzpF4b5RAyQcTAwtmjP8fzgQbxW1RzOyDodRAi9-JvFY8y14enWdEUnObOUlaB8A-W1OurcTuIgAfUASeRyzz8JBe0kURKNO1GBUybbXcD4jQV9W27WzWnDleqZaDezEXKCd6Kx15mk3K619ROtImFYf',
